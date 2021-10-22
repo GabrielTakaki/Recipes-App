@@ -4,8 +4,11 @@ MVP of an Recipe APP developed for help restaurants and bars
 ## Technologies used
 
 -React
+<br>
 -Redux
+<br>
 -Context
+<br>
 -Kanban
 
 ## API
