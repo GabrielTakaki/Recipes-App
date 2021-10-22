@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import copy from 'clipboard-copy';
 import Header from '../components/Header';
+import trybefoodback from '../images/trybefoodback.png';
 import shareIcon from '../images/shareIcon.svg';
 import blackHeartIcon from '../images/blackHeartIcon.svg';
 import '../styles/Favorite.css';
@@ -31,15 +32,18 @@ export default function FavoriteRecipes() {
     const { id, type, name, image, area, category } = recipe;
     return (
       <div key={ index }>
-        <Link to={ `/${type}s/${id}` }>
-          <img
-            data-testid={ `${index}-horizontal-image` }
-            className="card-img"
-            src={ image }
-            alt={ name }
-          />
-        </Link>
-        <div className="foods-card">
+        <div className="section-card">
+          <div className="dish-images">
+            <Link to={ `/${type}s/${id}` }>
+              <img
+                data-testid={ `${index}-horizontal-image` }
+                className="card-img"
+                src={ image }
+                alt={ name }
+              />
+              <img className="dish-bg" src={ trybefoodback } alt="dish background" />
+            </Link>
+          </div>
           <span data-testid={ `${index}-horizontal-top-text` }>
             { `${area} - ${category}` }
           </span>
@@ -50,7 +54,7 @@ export default function FavoriteRecipes() {
           >
             { name }
           </Link>
-          <div className="favorite__card-share">
+          <div>
             <button
               className="favorite-btn"
               onClick={ () => {
@@ -60,21 +64,25 @@ export default function FavoriteRecipes() {
               type="button"
             >
               <img
-                className="heart-img"
+                className="share-image"
                 src={ shareIcon }
                 alt="imagem de compartilhar"
                 data-testid={ `${index}-horizontal-share-btn` }
               />
             </button>
-            { linkShare && 'Link copiado!' }
-            <input
+            { linkShare && <p className="link-copiado">Link copiado!</p> }
+            <button
               data-testid={ `${index}-horizontal-favorite-btn` }
-              className="heart-img"
-              type="image"
-              src={ blackHeartIcon }
-              alt="Favorite"
-              onClick={ () => removeFavorites(id) }
-            />
+              className="favorite-btn"
+              type="button"
+            >
+              <img
+                data-testid="favorite-btn"
+                alt="icone favorito"
+                src={ blackHeartIcon }
+                className="heart-img"
+              />
+            </button>
           </div>
         </div>
       </div>
@@ -84,16 +92,19 @@ export default function FavoriteRecipes() {
   const cardDrinks = (recipe, index) => {
     const { id, type, name, image, alcoholicOrNot } = recipe;
     return (
-      <div key={ index } className="section-card">
-        <Link to={ `/${type}s/${id}` }>
-          <img
-            data-testid={ `${index}-horizontal-image` }
-            className="card-img"
-            src={ image }
-            alt={ name }
-          />
-        </Link>
-        <div>
+      <div key={ index }>
+        <div className="section-card">
+          <div className="dish-images">
+            <Link to={ `/${type}s/${id}` }>
+              <img
+                data-testid={ `${index}-horizontal-image` }
+                className="card-img"
+                src={ image }
+                alt={ name }
+              />
+              <img className="dish-bg" src={ trybefoodback } alt="dish background" />
+            </Link>
+          </div>
           <Link
             to={ `/${type}s/${id}` }
             data-testid={ `${index}-horizontal-name` }
@@ -104,10 +115,11 @@ export default function FavoriteRecipes() {
             >
               { alcoholicOrNot }
             </span>
-            { name }
+            { ` - ${name}` }
           </Link>
-          <div className="favorite__card-share">
+          <div>
             <button
+              className="favorite-btn"
               onClick={ () => {
                 copy(`http://localhost:3000/${type}s/${id}`);
                 setLinkShare(true);
@@ -115,20 +127,25 @@ export default function FavoriteRecipes() {
               type="button"
             >
               <img
+                className="share-image"
                 src={ shareIcon }
                 alt="imagem de compartilhar"
                 data-testid={ `${index}-horizontal-share-btn` }
               />
             </button>
-            { linkShare && 'Link copiado!' }
-            <input
+            { linkShare && <p className="link-copiado">Link copiado!</p> }
+            <button
               data-testid={ `${index}-horizontal-favorite-btn` }
-              className="icon-favorite"
-              type="image"
-              src={ blackHeartIcon }
-              alt="Favorite"
-              onClick={ () => removeFavorites(id) }
-            />
+              className="favorite-btn"
+              type="button"
+            >
+              <img
+                data-testid="favorite-btn"
+                alt="icone favorito"
+                src={ blackHeartIcon }
+                className="heart-img"
+              />
+            </button>
           </div>
         </div>
       </div>
@@ -149,7 +166,7 @@ export default function FavoriteRecipes() {
     <div>
       <Header brand="Favourites Recipes" />
       <section className="favorite__filter-btn-section">
-        <div className="div-explore">
+        <div className="div-explore" style={ { height: 'unset' } }>
           <button
             type="button"
             data-testid="filter-by-all-btn"
@@ -176,9 +193,9 @@ export default function FavoriteRecipes() {
           </button>
         </div>
       </section>
-      <section>
+      <div className="food-cards">
         { fillCardsMealsAndDrinks() }
-      </section>
+      </div>
     </div>
   );
 }

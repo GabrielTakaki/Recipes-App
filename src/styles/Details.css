@@ -33,6 +33,11 @@
   justify-content: center;
 }
 
+.title-and-details-fav {
+  display: flex;
+  justify-content: space-between;
+}
+
 .dish-details-category {
   margin-left: 15px;
 }
