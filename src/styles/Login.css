@@ -17,6 +17,7 @@
   flex-direction: column;
   height: auto;
   margin-bottom: 80px;
+  margin-top: 20vh;
   min-width: 320px;
   padding: 20px 0;
   text-align: center;
@@ -97,10 +98,4 @@
 .login__button:disabled {
   background: gray;
   cursor: default;
-}
-
-@media only screen and (min-width: 700px) {
-  .login__img {
-    height: 500px;
-  }
 }

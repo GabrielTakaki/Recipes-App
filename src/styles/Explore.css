@@ -1,7 +1,8 @@
 .explore-wrapper {
-  height: 100vh;
-  max-width: 700px;
-  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  overflow-x: hidden;
 }
 
 .div-explore {
@@ -38,9 +39,8 @@
   flex-wrap: wrap;
   height: 100%;
   justify-content: space-evenly;
-  margin-left: 20px;
+  margin: auto;
   max-width: 90vw;
-  z-index: 10;
 }
 
 @media only screen and (max-width: 700px) {
