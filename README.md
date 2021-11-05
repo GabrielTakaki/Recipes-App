@@ -17,7 +17,7 @@
 
 <br/>
 
-<img src="home/gabriel/preview/01-mobileStart.gif">
+<img src="preview/01-mobileStart.gif">
 
 <br/>
 
@@ -25,7 +25,7 @@
 
 <br/>
 
-<img src="home/gabriel/preview/02-mobileThrough.gif">
+<img src="preview/02-mobileThrough.gif">
 
 <br/>
 
@@ -33,7 +33,7 @@
 
 <br/>
 
-<img src="home/gabriel/preview/03-webStart.gif">
+<img src="preview/03-webStart.gif">
 
 <br/>
 
@@ -41,7 +41,7 @@
 
 <br/>
 
-<img src="home/gabriel/preview/reduxStore.gif">
+<img src="preview/reduxStore.gif">
 
 <br/>
 
@@ -49,7 +49,7 @@
 
 <br/>
 
-<img src="home/gabriel/preview/reduxChart.gif">
+<img src="preview/reduxChart.gif">
 
 <br/>
 
@@ -57,7 +57,7 @@
 
 <br/>
 
-<img src="home/gabriel/preview/contextAndProviders.gif">
+<img src="preview/contextAndProviders.gif">
 
 <br/>
 <br/>
