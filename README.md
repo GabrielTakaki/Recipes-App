@@ -1,4 +1,4 @@
-# :zap:     Seja muito bem-vindo Projeto Menu Recipe App ! O App mais delicioso do GitHub!     :zap:
+# <p align=center> :zap: Bem Vindo ao Projeto Menu Recipe App! :zap: <br> O App mais delicioso do GitHub! </p>
 
 
 ---
@@ -7,37 +7,60 @@
 
 #### É um MVP de um App de Receitas. Ele foi desenvolvido para ajudar restaurantes e bares em suas receitas e drinks. Nele são consumidas duas API's (uma para comidas e outra para bebidas). 
 
+<br/>
+
 ### Seguem as telas do aplicativo:
 
-#### Tela de login;
+<br/>
 
-GIF 1
+### Login com Mobile:
 
-#### Tela de receitas;
+<br/>
 
-GIF 2
+<img src="preview/01-mobileStart.gif">
 
-#### Tela de detalhes da receita;
+<br/>
 
-GIF 3
+### Percorrendo o app-mobile:
 
-#### Tela de receitas favoritas;
+<br/>
 
-GIF 4
+<img src="preview/02-mobileThrough.gif">
 
-#### Tela de receitas feitas;
+<br/>
 
-GIF 5
+### Login e percorrendo app Web:
 
-#### Tela de perfil;
+<br/>
 
-GIF 6
+<img src="preview/03-webStart.gif">
 
-#### Tela de explorar comidas;
+<br/>
 
-GIF 7
+### Estruturação do Redux (escopo global) Stores, Reducers e Actions:
 
----
+<br/>
+
+<img src="preview/reduxStore.gif">
+
+<br/>
+
+### Gráfico do Redux;
+
+<br/>
+
+<img src="preview/reduxChart.gif">
+
+<br/>
+
+### Estruturação dos Providers e ContextAPI (escopo de components):
+
+<br/>
+
+<img src="preview/contextAndProviders.gif">
+
+<br/>
+<br/>
 
 ## Desenvolvimento :  :pencil:
 
@@ -64,7 +87,7 @@ GIF 7
 
 Você pode acessar um protótipo no link abaixo:
 
-<aguardando>
+em deploy
 
 ---
 
@@ -108,17 +131,31 @@ Os end-points também são bastante ricos, você pode [vê-los aqui](https://www
 <a href="https://github.com/andrejaques">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/7872342?v=4" width="100px;" alt="foto_perfil"/>
  <br/>
- <sub><b>André Jaques</b></sub></a> <a href="https://github.com/andrejaques">🚀</a> 
+ <br/>
+ <sub><b>André Jaques</b></sub></a> <a href="https://github.com/andrejaques">
+ 🚀
+</a> 
+
+ <br/> 
  <br/> 
  <a href="https://github.com/flavioCoder1">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/78191084?v=4" width="100px;" alt="foto_perfil"/>
  <br />
- <sub><b>Flavio Cordeiro</b></sub></a> <a href="https://github.com/flavioCoder1">🚀</a>
+ <br />
+ <sub><b>Flavio Cordeiro</b></sub></a> <a href="https://github.com/flavioCoder1">
+ 🚀
+</a>
+
+ <br/>
  <br/>
  <a href="https://github.com/GabrielTakaki">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/82051093?v=4" width="100px;" alt="foto_perfil"/>
  <br/>
- <sub><b>Gabriel Takaki</b></sub></a> <a href="https://github.com/GabrielTakaki">🚀</a>
+ <br/>
+ <sub><b>Gabriel Takaki</b></sub></a> <a href="https://github.com/GabrielTakaki">
+    🚀
+</a>
+<br/>
 <br/>
 
 Feito com :green_heart: por André Jaques , Flavio Cordeiro, Gabriel Takaki  
