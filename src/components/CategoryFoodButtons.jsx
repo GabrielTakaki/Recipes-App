@@ -74,6 +74,7 @@ function CategoryFoodButtons() {
     removeDisplayList();
     setFoodIngredientSelected('');
   };
+
   if (loading) return <Loading />;
   return (
     <div>
