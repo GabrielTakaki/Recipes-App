@@ -27,7 +27,7 @@ function Foods(props) {
   });
 
   return (
-    <>
+    <z>
       <Header
         brand="Foods"
         src={ searchIcon }
@@ -49,7 +49,7 @@ function Foods(props) {
         />)) }
       </main>
       <Footer />
-    </>
+    </z>
   );
 }
 

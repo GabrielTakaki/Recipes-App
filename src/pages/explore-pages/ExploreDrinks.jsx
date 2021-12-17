@@ -21,7 +21,7 @@ function ExploreDrinks() {
   };
 
   return (
-    <div className="explore-wrapper">
+    <>
       <Header brand="Explore Drinks" className="img-search" />
       <div className="div-explore">
         <Link to="/explorar/bebidas/ingredientes">
@@ -44,7 +44,7 @@ function ExploreDrinks() {
         <img className="explore" src={ ArrowIcon } alt="voltar" />
       </button>
       <Footer />
-    </div>
+    </>
   );
 }
 
