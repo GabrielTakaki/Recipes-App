@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import copy from 'clipboard-copy';
 import Header from '../components/Header';
-import trybefoodback from '../images/trybefoodback.png';
 import shareIcon from '../images/shareIcon.svg';
 import blackHeartIcon from '../images/blackHeartIcon.svg';
 import '../styles/Favorite.css';
@@ -32,18 +31,15 @@ export default function FavoriteRecipes() {
     const { id, type, name, image, area, category } = recipe;
     return (
       <div key={ index }>
-        <div className="section-card">
-          <div className="dish-images">
-            <Link to={ `/${type}s/${id}` }>
-              <img
-                data-testid={ `${index}-horizontal-image` }
-                className="card-img"
-                src={ image }
-                alt={ name }
-              />
-              <img className="dish-bg" src={ trybefoodback } alt="dish background" />
-            </Link>
-          </div>
+        <Link to={ `/${type}s/${id}` }>
+          <img
+            data-testid={ `${index}-horizontal-image` }
+            className="card-img"
+            src={ image }
+            alt={ name }
+          />
+        </Link>
+        <div className="foods-card">
           <span data-testid={ `${index}-horizontal-top-text` }>
             { `${area} - ${category}` }
           </span>
@@ -54,7 +50,7 @@ export default function FavoriteRecipes() {
           >
             { name }
           </Link>
-          <div>
+          <div className="favorite__card-share">
             <button
               className="favorite-btn"
               onClick={ () => {
@@ -64,25 +60,21 @@ export default function FavoriteRecipes() {
               type="button"
             >
               <img
-                className="share-image"
+                className="heart-img"
                 src={ shareIcon }
                 alt="imagem de compartilhar"
                 data-testid={ `${index}-horizontal-share-btn` }
               />
             </button>
-            { linkShare && <p className="link-copiado">Link copiado!</p> }
-            <button
+            { linkShare && 'Link copiado!' }
+            <input
               data-testid={ `${index}-horizontal-favorite-btn` }
-              className="favorite-btn"
-              type="button"
-            >
-              <img
-                data-testid="favorite-btn"
-                alt="icone favorito"
-                src={ blackHeartIcon }
-                className="heart-img"
-              />
-            </button>
+              className="heart-img"
+              type="image"
+              src={ blackHeartIcon }
+              alt="Favorite"
+              onClick={ () => removeFavorites(id) }
+            />
           </div>
         </div>
       </div>
@@ -92,19 +84,16 @@ export default function FavoriteRecipes() {
   const cardDrinks = (recipe, index) => {
     const { id, type, name, image, alcoholicOrNot } = recipe;
     return (
-      <div key={ index }>
-        <div className="section-card">
-          <div className="dish-images">
-            <Link to={ `/${type}s/${id}` }>
-              <img
-                data-testid={ `${index}-horizontal-image` }
-                className="card-img"
-                src={ image }
-                alt={ name }
-              />
-              <img className="dish-bg" src={ trybefoodback } alt="dish background" />
-            </Link>
-          </div>
+      <div key={ index } className="section-card">
+        <Link to={ `/${type}s/${id}` }>
+          <img
+            data-testid={ `${index}-horizontal-image` }
+            className="card-img"
+            src={ image }
+            alt={ name }
+          />
+        </Link>
+        <div>
           <Link
             to={ `/${type}s/${id}` }
             data-testid={ `${index}-horizontal-name` }
@@ -115,11 +104,10 @@ export default function FavoriteRecipes() {
             >
               { alcoholicOrNot }
             </span>
-            { ` - ${name}` }
+            { name }
           </Link>
-          <div>
+          <div className="favorite__card-share">
             <button
-              className="favorite-btn"
               onClick={ () => {
                 copy(`http://localhost:3000/${type}s/${id}`);
                 setLinkShare(true);
@@ -127,25 +115,20 @@ export default function FavoriteRecipes() {
               type="button"
             >
               <img
-                className="share-image"
                 src={ shareIcon }
                 alt="imagem de compartilhar"
                 data-testid={ `${index}-horizontal-share-btn` }
               />
             </button>
-            { linkShare && <p className="link-copiado">Link copiado!</p> }
-            <button
+            { linkShare && 'Link copiado!' }
+            <input
               data-testid={ `${index}-horizontal-favorite-btn` }
-              className="favorite-btn"
-              type="button"
-            >
-              <img
-                data-testid="favorite-btn"
-                alt="icone favorito"
-                src={ blackHeartIcon }
-                className="heart-img"
-              />
-            </button>
+              className="icon-favorite"
+              type="image"
+              src={ blackHeartIcon }
+              alt="Favorite"
+              onClick={ () => removeFavorites(id) }
+            />
           </div>
         </div>
       </div>
@@ -166,7 +149,7 @@ export default function FavoriteRecipes() {
     <div>
       <Header brand="Favourites Recipes" />
       <section className="favorite__filter-btn-section">
-        <div className="div-explore" style={ { height: 'unset' } }>
+        <div className="div-explore">
           <button
             type="button"
             data-testid="filter-by-all-btn"
@@ -193,9 +176,9 @@ export default function FavoriteRecipes() {
           </button>
         </div>
       </section>
-      <div className="food-cards">
+      <section>
         { fillCardsMealsAndDrinks() }
-      </div>
+      </section>
     </div>
   );
 }

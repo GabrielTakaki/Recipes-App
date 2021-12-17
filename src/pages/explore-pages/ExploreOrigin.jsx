@@ -38,7 +38,7 @@ function ExploreOrigin() {
     history.goBack();
   };
   return (
-    <div className="explore-wrapper">
+    <>
       <Header
         brand="Explore Origin"
         src={ searchIcon }
@@ -84,7 +84,7 @@ function ExploreOrigin() {
           />)) }
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
 

@@ -27,6 +27,7 @@ function CategoryFoodButtons() {
     foodCategoryClick,
   } = useContext(myContext);
   const dispatch = useDispatch();
+  // const [categoryClick, setFoodCategoryClick] = useState([]);
   const [showInput, setShowInput] = useState(true);
   const [lastClick, setLastClick] = useState('');
 

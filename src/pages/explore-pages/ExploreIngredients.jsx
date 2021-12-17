@@ -14,7 +14,7 @@ function ExploreIngredients() {
     history.goBack();
   };
   return (
-    <div className="explore-wrapper">
+    <>
       <Header brand="Explore Ingredients" className="img-search" />
       <button className="voltar2 " type="button" onClick={ goToPreviousPath }>
         <img className="explore" src={ ArrowIcon } alt="voltar" />
@@ -63,7 +63,7 @@ function ExploreIngredients() {
         }
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
 

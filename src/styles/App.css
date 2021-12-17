@@ -20,17 +20,20 @@ html {
   background-color: #E6E6E6;
 }
 
-body {
-  margin: 0;
-}
-
 .app {
   overflow-x: hidden;
   width: 100vw;
+  margin: 0;
 }
 
 #root {
+  margin: 0;
+  height: 100vh;
   background-color: rgb(230, 230, 230);
+}
+
+body {
+  margin: 0;
 }
 
 .meals {
@@ -49,6 +52,7 @@ body {
   background-color: rgba(255, 255, 255, 50%);
   height: 20px;
   position: fixed;
+  cursor: pointer;
 }
 
 .voltar1 {
@@ -56,6 +60,7 @@ body {
   border: none;
   height: 20px;
   position: fixed;
+  cursor: pointer;
 }
 
 .voltar2 {
@@ -64,6 +69,7 @@ body {
   height: 20px;
   margin-left: 10px;
   position: absolute;
+  cursor: pointer;
 }
 
 /* .food-cards {

@@ -5,7 +5,7 @@ import Footer from '../../components/Footer';
 
 function Explore() {
   return (
-    <div className="explore-wrapper">
+    <>
       <Header brand="Explore" className="img-search" />
       <div className="div-explore">
         <Link to="/explorar/comidas">
@@ -16,7 +16,7 @@ function Explore() {
         </Link>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
 
