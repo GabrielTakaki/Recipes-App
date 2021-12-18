@@ -71,7 +71,7 @@
 # Intruções para rodar o projeto  :pencil:
 
 1. Clone o repositório
-  * `git clone git@github.com:flaviocordeiro/menu-recipes-app.git`
+  * `git clone git@github.com:gabrieltakaki/menu-recipes-app.git`
   * Entre na pasta do repositório que você acabou de clonar:
     * `cd menu-recipes-app`
 
